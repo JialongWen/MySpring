@@ -66,9 +66,12 @@
 2.Servlet是单例的，并且Servlet线程不安全。<br>
 3.前置控制器(中央控制器）。<br>
 #### 整体思路：
-* 
-* 
-* 
+* 1.创建一个前端控制器（中央控制器）DispatcherServlet 拦截所有请求（SpringMVC基于Servlet实现）
+* 2.初始化操作,实际上就是重写Servlet的init方法。<br>
+    2.1 将扫包范围内的所有类，注入到SpringIOC容器(当然他得带有@Controller注解才会被注入）<br>
+    2.2 将url映射和方法关联<br>
+    2.2.1 判断类上是否存在注解，使用Java反射机制循环遍历方法，判断方法上是否存在注解，进行封装url和方法对应。<br>
+* 3.处理请求
 * 
 #### @Controller注解的实现
 #### 思路:
