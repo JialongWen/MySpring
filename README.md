@@ -61,8 +61,8 @@
 第三部分
 --------
 ### 手写SpringMVC框架流程
->>> SpringMVC原理（执行流程）:<br>
-SpringMVC基于Servlet实现
+>> SpringMVC原理（执行流程）:<br>
+* SpringMVC基于Servlet实现
 #### @Controller注解的实现
 #### 思路:
 * 
