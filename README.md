@@ -62,7 +62,14 @@
 --------
 ### 手写SpringMVC框架流程
 >> SpringMVC原理（执行流程）:<br>
-* SpringMVC基于Servlet实现
+1.SpringMVC基于Servlet实现。<br>
+2.Servlet是单例的，并且Servlet线程不安全。<br>
+3.前置控制器(中央控制器）。<br>
+#### 整体思路：
+* 
+* 
+* 
+* 
 #### @Controller注解的实现
 #### 思路:
 * 
