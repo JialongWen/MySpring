@@ -20,7 +20,7 @@ Mybatis
 * 初始化连接池(将最小值数的连接数创建出来放到空闲线程里面)
 * 获取连接getConnection <br>
 具体注意事项请看代码注释
-* 释放连接
+* 释放连接releaseConnetion
 
 #### 一些细节问题
 * 
