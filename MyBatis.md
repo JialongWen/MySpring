@@ -27,7 +27,7 @@ Mybatis
 但是本次我没有这么做,主要是为了测试方便。
 * 其他问题均记录在代码注释中
 
-第二部分
+[第二部分](https://github.com/JialongWen/MyselfMybatis)
 --------
 ### 手写mybatis（注解版本）
 #### 难点
