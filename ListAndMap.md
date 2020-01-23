@@ -1,6 +1,6 @@
 Collection
 ============
-手写部分List接口实现 和 HashMap
+手写ArrayList、LinkeList 和 HashMap(jdk1.7)
 ----------------------------------
 第一部分
 -----------
