@@ -42,4 +42,9 @@ List
    * get方法的实现
    * remove方法的实现
    * add(int index,E e)添加到具体下标的实现
+   
+   第二部分
+   ---------
+   ### 手写LinkeList
+   
 
