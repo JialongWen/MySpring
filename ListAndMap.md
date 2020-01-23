@@ -2,7 +2,7 @@ List
 ============
 手写ArrayList、LinkeList 和 HashMap(jdk1.7)
 ----------------------------------
-第一部分
+[第一部分](https://github.com/JialongWen/List/tree/master/src/com/wjl/list/arraylist)
 -----------
 ### 手写ArrayList
 #### 主要的实现难点<br>
