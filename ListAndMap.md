@@ -43,7 +43,7 @@ List
    * remove方法的实现
    * add(int index,E e)添加到具体下标的实现
    
-   第二部分
+   [第二部分](https://github.com/JialongWen/List/tree/master/src/com/wjl/list/linkelist)
    ---------
    ### 手写LinkeList
    * LinkeList是基于双向链表实现的
