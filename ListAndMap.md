@@ -81,5 +81,36 @@ List
    ```
    * 扩容实际根据源码中的思路，在超过负载容量时就扩容两倍
    * 扩容方法(resize)我的思路同数组扩容时一致直接申请新的数组并将数据迁移过去，但是这里要注意在数组长度改变时key的hash也会改变所以我们需要重新计算index的位置。
-   
+   ```Java
+    private void resize() {
+
+        //创建新的数组大小为两倍
+        Node<K,V>[] newTable = new Node[DEFAULT_INITIAL_SIZE<<1];
+        //先将旧的table中的数据取出来重新计算hash
+        for (int i = 0; i < DEFAULT_INITIAL_SIZE; i++) {
+            Node<K, V> node = table[i];
+            //这里我们任然使用while循环来控制判断是否存在下一个
+            while (node!=null){
+                table[i] = null;//防止资源泄漏
+                //计算新的下标
+                int index = getIndex(node.getKey(),newTable.length);
+                //将他放进去,这里有一点因为可能这个位置之前就值了
+                //所以需要将这里的值取出来并且设置为当前的node的下一个再添加到容器中
+                Node<K, V> kvNode = newTable[index];
+                //取出当前node的下一个备用
+                Node<K, V> oldNext = node.next;
+                node.next = kvNode;
+                newTable[index] = node;
+                node = oldNext;
+            }
+        }
+        //循环结束后替换table指向新的table
+        //修改各个变量释放不必要的强引用
+        table = newTable;
+        DEFAULT_INITIAL_SIZE = newTable.length;
+        newTable = null;
+    }
+   ```
+   <br>
+    `如果您发现有其他问题或者您对我有什么改进的意见欢迎在下方留言或者发送到我的邮箱631488786@qq.com`
 
