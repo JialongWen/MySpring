@@ -56,6 +56,7 @@ List
    * remove方法的实现
    * add(in index,E e)添加到具体下标的方法实现
    
+   [第三部分](https://github.com/JialongWen/Map)
    HashMap
    ========
    ### 手写hashMap
